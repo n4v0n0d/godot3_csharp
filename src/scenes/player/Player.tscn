@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/lil_guy.png" type="Texture" id=1]
+[ext_resource path="res://src/scenes/player/PlayerMovement.cs" type="Script" id=2]
+[ext_resource path="res://src/scenes/player/Player.cs" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 16 )
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="PlayerMovement" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerMovement"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="PlayerMovement"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )

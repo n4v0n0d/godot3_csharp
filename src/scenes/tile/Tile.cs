@@ -5,11 +5,10 @@ public class Tile : TextureButton
 {
     [Signal]
     delegate void TilePressed();
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
 
-    // Called when the node enters the scene tree for the first time.
+    [Signal]
+    delegate void SlideCompleted();
+
     public override void _Ready()
     {
         GD.Print("Hello from C#");
