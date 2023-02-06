@@ -10,11 +10,15 @@ public class Player : Node2D
 
     [Export] public int something = 3;
 
+    // on Ready
     private PlayerMovement playerMovement;
+    private Camera2D camera;
 
     public override void _Ready() {
         // Not actually fetching this for anything.
         playerMovement = GetNode<PlayerMovement>("PlayerMovement");
+        camera = GetNode<Camera2D>("PlayerMovement/Camera2D");
+        camera.Zoom = new Vector2((float)0.5, (float)0.5);
 
         GD.Print("The Player was created!");
     }

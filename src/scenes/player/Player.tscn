@@ -13,6 +13,9 @@ script = ExtResource( 3 )
 [node name="PlayerMovement" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
 
+[node name="Camera2D" type="Camera2D" parent="PlayerMovement"]
+current = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerMovement"]
 shape = SubResource( 1 )
 
