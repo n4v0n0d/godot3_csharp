@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Godot Csharp"
-run/main_scene="res://src/scenes/tile/Tile.tscn"
+run/main_scene="res://src/scenes/world/World.tscn"
 config/icon="res://icon.png"
 
 [input]
